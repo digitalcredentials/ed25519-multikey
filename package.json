@@ -11,20 +11,31 @@
   "type": "module",
   "exports": "./lib/index.js",
   "browser": {
+    "buffer": false,
+    "crypto": false,
+    "util": false,
+    "promisify": false,
     "./lib/ed25519.js": "./lib/ed25519-browser.js"
+  },
+  "react-native": {
+    "buffer": false,
+    "crypto": false,
+    "util": false,
+    "promisify": false,
+    "./lib/ed25519.js": "./lib/ed25519-reactnative.js"
   },
   "files": [
     "lib/**/*.js"
   ],
   "dependencies": {
     "@noble/ed25519": "^1.6.0",
+    "@stablelib/ed25519": "^2.0.2",
     "base58-universal": "^2.0.0",
     "base64url-universal": "^2.0.0"
   },
   "devDependencies": {
     "@digitalbazaar/ed25519-verification-key-2018": "^4.0.0",
     "@digitalbazaar/ed25519-verification-key-2020": "^4.1.0",
-    "@stablelib/ed25519": "^1.0.2",
     "c8": "^7.11.3",
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
