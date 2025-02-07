@@ -1,9 +1,10 @@
-# Ed25519Multikey Key Pair Library for Linked Data _(@digitalbazaar/ed25519-multikey)_
+# Ed25519Multikey Key Pair Library for Linked Data _(@digitalcredentials/ed25519-multikey)_
 
-[![Node.js CI](https://github.com/digitalbazaar/ed25519-multikey/workflows/Node.js%20CI/badge.svg)](https://github.com/digitalbazaar/ed25519-multikey/actions?query=workflow%3A%22Node.js+CI%22)
-[![NPM Version](https://img.shields.io/npm/v/@digitalbazaar/ed25519-multikey.svg)](https://npm.im/@digitalbazaar/ed25519-multikey)
+[![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/ed25519-multikey.svg)](https://npm.im/@digitalcredentials/ed25519-multikey)
 
 > Javascript library for generating and working with Ed25519Multikey key pairs.
+
+NOTE: this is a fork of [`@digitalbazaar/ed25519-multikey`](https://github.com/digitalbazaar/ed25519-multikey) to add support for react native. The only fundamental change is to add a [reactnative override](./lib/ed25519-reactnative.js) that uses [@noble/ed25519](https://www.npmjs.com/package/@noble/ed25519) for cryptography.
 
 ## Table of Contents
 
@@ -19,9 +20,9 @@
 
 For use with:
 
-* [`@digitalbazaar/eddsa-2022-cryptosuite`](https://github.com/digitalbazaar/eddsa-2022-cryptosuite) `^1.0.0`
-  crypto suite (with [`jsonld-signatures`](https://github.com/digitalbazaar/jsonld-signatures) `^11.0.0`)
-* [`@digitalbazaar/data-integrity`](https://github.com/digitalbazaar/data-integrity) `^1.0.0`
+* [`@digitalcredentials/eddsa-2022-cryptosuite`](https://github.com/digitalcredentials/eddsa-2022-cryptosuite) `^1.0.0`
+  crypto suite (with [`jsonld-signatures`](https://github.com/digitalcredentials/jsonld-signatures) `^11.0.0`)
+* [`@digitalcredentials/data-integrity`](https://github.com/digitalcredentials/data-integrity) `^1.0.0`
 
 See also (related specs):
 
@@ -139,7 +140,7 @@ const valid = await verify({data, signature});
 
 If you have serialized and stored keys of the previous
 `Ed25519VerificationKey2020` key type (for example, generated using
-the [`ed25519-verification-key-2020`](https://github.com/digitalbazaar/ed25519-verification-key-2020))
+the [`ed25519-verification-key-2020`](https://github.com/digitalcredentials/ed25519-verification-key-2020))
 library, things to keep in mind:
 
 * Instances of those key types still contain the same key material, the only
@@ -157,7 +158,7 @@ library, things to keep in mind:
 Example of converting:
 
 ```js
-import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
+import * as Ed25519Multikey from '@digitalcredentials/ed25519-multikey';
 import {Ed25519VerificationKey2020}
   from '@digitalbazaar/ed25519-verification-key-2020';
 
@@ -202,7 +203,7 @@ library, things to keep in mind:
 Example of converting:
 
 ```js
-import * as Ed25519Multikey from '@digitalbazaar/ed25519-multikey';
+import * as Ed25519Multikey from '@digitalcredentials/ed25519-multikey';
 import {Ed25519VerificationKey2018}
   from '@digitalbazaar/ed25519-verification-key-2018';
 
@@ -235,11 +236,7 @@ PRs accepted.
 If editing the Readme, please conform to the
 [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
-## Commercial Support
-
-Commercial support for this library is available upon request from
-Digital Bazaar: support@digitalbazaar.com
 
 ## License
 
-[New BSD License (3-clause)](LICENSE) © 2020 Digital Bazaar
+[New BSD License (3-clause)](LICENSE)
