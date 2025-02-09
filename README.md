@@ -4,7 +4,7 @@
 
 > Javascript library for generating and working with Ed25519Multikey key pairs.
 
-NOTE: this is a fork of [`@digitalbazaar/ed25519-multikey`](https://github.com/digitalbazaar/ed25519-multikey) to add support for react native. The only fundamental change is to add a [reactnative override](./lib/ed25519-reactnative.js) that uses [@noble/ed25519](https://www.npmjs.com/package/@noble/ed25519) for cryptography.
+NOTE: this is a fork of [`@digitalbazaar/ed25519-multikey`](https://github.com/digitalbazaar/ed25519-multikey) to add support for react native. The only fundamental change is to add this [react native override](./lib/ed25519-reactnative.js) that uses [@noble/ed25519](https://www.npmjs.com/package/@noble/ed25519) for cryptography in react native.
 
 ## Table of Contents
 
