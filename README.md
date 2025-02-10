@@ -13,7 +13,6 @@ NOTE: this is a fork of [`@digitalbazaar/ed25519-multikey`](https://github.com/d
 - [Install](#install)
 - [Usage](#usage)
 - [Contribute](#contribute)
-- [Commercial Support](#commercial-support)
 - [License](#license)
 
 ## Background
@@ -236,7 +235,6 @@ PRs accepted.
 If editing the Readme, please conform to the
 [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
-
 ## License
 
-[New BSD License (3-clause)](LICENSE)
+[MIT License](LICENSE.md) © 2025 Digital Credentials Consortium.

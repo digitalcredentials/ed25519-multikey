@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/digitalcredentials/ed25519-multikey"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "type": "module",
   "exports": "./lib/index.js",
   "browser": {
