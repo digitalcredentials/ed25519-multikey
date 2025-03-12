@@ -1,18 +1,21 @@
 {
   "name": "@digitalcredentials/ed25519-multikey",
-  "version": "1.4.0",
+  "version": "1.5.0-beta.1",
   "description": "Javascript library for generating and working with Ed25519Multikey key pairs.",
   "homepage": "https://github.com/digitalcredentials/ed25519-multikey",
   "repository": {
     "type": "git",
     "url": "https://github.com/digitalcredentials/ed25519-multikey"
   },
-  "license": "MIT",
+  "type":"module",
   "main": "cjs/index.js",
-  "module": "./index.js",
+  "module": "lib/index.js",
   "exports": {
-    "import": "./index.js",
-    "require": "./cjs/index.js"
+    ".": {
+      "require": "./cjs/index.js",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "browser": {
     "buffer": false,
@@ -67,11 +70,9 @@
   },
   "scripts": {
     "rollup": "rollup -c rollup.config.mjs",
-    "build": "npm run clear && npm run rollup && ./build-dist.sh",
+    "build": "npm run clear && npm run rollup",
     "clear": "rimraf dist/ && mkdir dist",
-    "posttest": "node post-test.js",
     "prepare": "npm run build",
-    "pretest": "node pre-test.js",
     "rebuild": "npm run clear && npm run build",
     "test": "npm run test-node",
     "test-karma": "karma start karma.conf.cjs",
