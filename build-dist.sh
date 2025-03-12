@@ -1,7 +1,5 @@
 mkdir ./dist/esm
 
-NEED TO EXPORT EVERYTHING FROM HERE, FROM INDEX.JS
-
 cat >dist/esm/index.js <<!EOF
 import cjsModule from '../index.js';
 export const generate = cjsModule.generate;

@@ -4,7 +4,7 @@ export default [
     input: './lib/index.js',
     output: [
       {
-        dir: 'dist',
+        dir: 'cjs',
         format: 'cjs',
         preserveModules: true
       }
