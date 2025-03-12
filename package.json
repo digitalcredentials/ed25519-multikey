@@ -7,16 +7,8 @@
     "type": "git",
     "url": "https://github.com/digitalcredentials/ed25519-multikey"
   },
-  "type":"module",
-  "main": "cjs/index.js",
-  "module": "lib/index.js",
-  "exports": {
-    ".": {
-      "require": "./cjs/index.js",
-      "import": "./lib/index.js"
-    },
-    "./package.json": "./package.json"
-  },
+  "type": "module",
+  "exports": "./lib/index.js",
   "browser": {
     "buffer": false,
     "crypto": false,
@@ -69,11 +61,6 @@
     "node": ">=16"
   },
   "scripts": {
-    "rollup": "rollup -c rollup.config.mjs",
-    "build": "npm run clear && npm run rollup",
-    "clear": "rimraf dist/ && mkdir dist",
-    "prepare": "npm run build",
-    "rebuild": "npm run clear && npm run build",
     "test": "npm run test-node",
     "test-karma": "karma start karma.conf.cjs",
     "test-node": "cross-env NODE_ENV=test mocha --preserve-symlinks -t 10000 test/**/*.spec.js",
