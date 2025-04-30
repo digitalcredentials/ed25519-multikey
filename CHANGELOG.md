@@ -1,6 +1,6 @@
 # @digitalbazaar/ed25519-multikey ChangeLog
 
-## 1.4.0 - TBD
+## 1.4.0 - 2025-04-30
 
 ### Added
 - Added a react native override to package.json to shim in react native crypto libraries.
